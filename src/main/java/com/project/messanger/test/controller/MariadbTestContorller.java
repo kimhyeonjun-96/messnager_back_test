@@ -7,10 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/mariadb")
 public class MariadbTestContorller {
 
     @Autowired
@@ -20,9 +23,13 @@ public class MariadbTestContorller {
 //        this.mariadbTestService = mariadbTestService;
 //    }
 
-    @GetMapping("/mariadb")
+    @GetMapping("")
     public List<TestUser> allUser(){
+
+        System.out.println("=====================MatiaDB Test Call of allUser Method!=====================");
+
         List<TestUser> userList = mariadbTestService.getAllUsers();
+
         return userList;
     }
 }
