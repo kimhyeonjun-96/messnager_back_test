@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/")
-public class HomeController {
+@RequestMapping("/home")
+public class TestHomeController {
 
     @Autowired
     private TestService ts;
