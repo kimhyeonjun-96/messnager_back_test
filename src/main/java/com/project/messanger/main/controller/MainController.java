@@ -19,6 +19,7 @@ public class HomeController {
     @Autowired
     UserService userService;
 
+    // Test
     @GetMapping("")
     public List<User> getAllUsers(){
         List<User> userList = userService.getAllUsers();
