@@ -20,5 +20,9 @@
         select * from groups where uidx = #{idx}
     </select>
 
+    <select id="getPromise" resultType="com.project.messanger.main.model.Promise" parameterType="int">
+        select * from promises where uidx = #{idx}
+    </select>
+
 <!--  main page  -->
 </mapper>

@@ -2,6 +2,7 @@ package com.project.messanger.main.controller;
 
 
 import com.project.messanger.main.model.Group;
+import com.project.messanger.main.model.Promise;
 import com.project.messanger.main.model.User;
 import com.project.messanger.main.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
-public class HomeController {
+public class MainController {
 
     @Autowired
     UserService userService;
@@ -28,19 +29,27 @@ public class HomeController {
     }
 
     @GetMapping("/{id}")
-    public User getUser(@PathVariable String id){
+    public User getUser(@PathVariable int id){
 
         return userService.getUser(id);
     }
 
     @GetMapping("/{idx}")
-    public List<Group> getGroup(@PathVariable String idx){
+    public List<Group> getGroup(@PathVariable int idx){
         System.out.println("idx : " + idx);
         List<Group> userGroupList = userService.getGroupes(idx);
 
         return userGroupList;
     }
 
+    @GetMapping("/{idx}")
+    public List<Promise> getPromise(@PathVariable int idx){
+        System.out.println("idx : " + idx);
+
+        List<Promise> userPromise = userService.getPromise(idx);
+
+        return userPromise;
+    }
 
 
 
