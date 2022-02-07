@@ -1,8 +1,8 @@
-package com.project.messanger.main.dao;
+package com.project.messanger.user.dao;
 
-import com.project.messanger.main.model.Group;
-import com.project.messanger.main.model.Promise;
-import com.project.messanger.main.model.User;
+import com.project.messanger.user.model.Group;
+import com.project.messanger.user.model.Promise;
+import com.project.messanger.user.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

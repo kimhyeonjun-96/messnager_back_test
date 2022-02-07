@@ -1,10 +1,10 @@
-package com.project.messanger.main.controller;
+package com.project.messanger.user.controller;
 
 
-import com.project.messanger.main.model.Group;
-import com.project.messanger.main.model.Promise;
-import com.project.messanger.main.model.User;
-import com.project.messanger.main.service.UserService;
+import com.project.messanger.user.model.Group;
+import com.project.messanger.user.model.Promise;
+import com.project.messanger.user.model.User;
+import com.project.messanger.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
-public class MainController {
+public class UserController {
 
     @Autowired
     UserService userService;

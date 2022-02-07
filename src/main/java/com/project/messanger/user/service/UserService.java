@@ -1,9 +1,9 @@
-package com.project.messanger.main.service;
+package com.project.messanger.user.service;
 
-import com.project.messanger.main.dao.UserMapper;
-import com.project.messanger.main.model.Group;
-import com.project.messanger.main.model.Promise;
-import com.project.messanger.main.model.User;
+import com.project.messanger.user.dao.UserMapper;
+import com.project.messanger.user.model.Group;
+import com.project.messanger.user.model.Promise;
+import com.project.messanger.user.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

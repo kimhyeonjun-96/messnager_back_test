@@ -1,7 +1,7 @@
-package com.project.messanger.main.controller;
+package com.project.messanger.user.controller;
 
-import com.project.messanger.main.model.Promise;
-import com.project.messanger.main.service.HistoryService;
+import com.project.messanger.user.model.Promise;
+import com.project.messanger.user.service.HistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

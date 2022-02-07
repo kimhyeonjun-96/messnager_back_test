@@ -1,4 +1,4 @@
-package com.project.messanger.main.model;
+package com.project.messanger.user.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

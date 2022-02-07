@@ -1,7 +1,7 @@
-package com.project.messanger.main.service;
+package com.project.messanger.user.service;
 
-import com.project.messanger.main.dao.HistoryMapper;
-import com.project.messanger.main.model.Promise;
+import com.project.messanger.user.dao.HistoryMapper;
+import com.project.messanger.user.model.Promise;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

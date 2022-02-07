@@ -1,10 +1,11 @@
-package com.project.messanger.main.model;
+package com.project.messanger.user.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+// JPA를 사용한다면 @Entity 어노테이션을 사용하면 된다.
 @Data
 @ToString
 @AllArgsConstructor

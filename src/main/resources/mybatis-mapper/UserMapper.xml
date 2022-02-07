@@ -3,24 +3,24 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.project.messanger.main.dao.UserMapper">
+<mapper namespace="com.project.messanger.user.dao.UserMapper">
 
     <!--  Test로 진행, 추후 삭제 예정!  -->
-    <select id="getAllUsers"  resultType="com.project.messanger.main.model.User">
+    <select id="getAllUsers"  resultType="com.project.messanger.user.model.User">
         select * from users
     </select>
 
 <!--  main page  -->
     <!--  login 후 본인계정 정보 Req  -->
-    <select id="getUser" resultType="com.project.messanger.main.model.User" parameterType="String">
+    <select id="getUser" resultType="com.project.messanger.user.model.User" parameterType="String">
         select * from users where id = #{id}
     </select>
 
-    <select id="getgroups" resultType="com.project.messanger.main.model.Group" parameterType="int`">
+    <select id="getgroups" resultType="com.project.messanger.user.model.Group" parameterType="int`">
         select * from groups where uidx = #{idx}
     </select>
 
-    <select id="getPromise" resultType="com.project.messanger.main.model.Promise" parameterType="int">
+    <select id="getPromise" resultType="com.project.messanger.user.model.Promise" parameterType="int">
         select * from promises where uidx = #{idx}
     </select>
 
