@@ -16,7 +16,7 @@
         select * from users where id = #{id}
     </select>
 
-    <select id="getgroups" resultType="com.project.messanger.user.model.Group" parameterType="int`">
+    <select id="getgroups" resultType="com.project.messanger.user.model.Group" parameterType="int">
         select * from groups where uidx = #{idx}
     </select>
 

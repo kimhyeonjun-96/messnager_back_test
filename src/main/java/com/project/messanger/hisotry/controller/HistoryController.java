@@ -1,4 +1,4 @@
-package com.project.messanger.user.controller;
+package com.project.messanger.hisotry.controller;
 
 import com.project.messanger.user.model.Promise;
 import com.project.messanger.user.service.HistoryService;
