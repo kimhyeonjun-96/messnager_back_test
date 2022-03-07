@@ -6,6 +6,7 @@ import com.project.messanger.user.model.Promise;
 import com.project.messanger.user.model.User;
 import com.project.messanger.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,14 +17,13 @@ public class UserController {
 
     @Autowired
     UserService userService;
-
     // Test
-    @GetMapping("")
-    public List<User> getAllUsers(){
-        List<User> userList = userService.getAllUsers();
-
-        return userList;
-    }
+//    @GetMapping("")
+//    public List<User> getAllUsers(){
+//        List<User> userList = userService.getAllUsers();
+//
+//        return userList;
+//    }
 
     @GetMapping("/")
     public @ResponseBody String main(){
@@ -35,9 +35,27 @@ public class UserController {
         * 2. 인증 성공시 데이터 전달
         * */
     }
+    @Secured("ROLE_USER")
+    @GetMapping("/user")
+    public @ResponseBody String userMain(){
 
+
+        return "user login success!";
+    }
+
+    @Secured("ROLE_USER")
+    @PostMapping("/user")
+    public @ResponseBody String userMainPost(){
+
+        User user = new User();
+        user.setRole("ROLE_USER");
+        return "POST >> user login success!";
+    }
+
+    @Secured("ROLE_USER")
     @GetMapping("/user/loginForm")
     public @ResponseBody String loginForm(){
+
         return "loginForm";
         /*
         * 1. 데이터 전달 받음
@@ -45,16 +63,19 @@ public class UserController {
         * */
     }
 
+    @Secured("ROLE_USER")
     @GetMapping("/user/login")
     public @ResponseBody String login(){
+
         return "login";
         /*
         * 1. 로그인 페이지 이동
         * */
     }
 
-    @GetMapping("/user/joinForm")
+    @GetMapping("/joinForm")
     public @ResponseBody String joinForm(){
+
         return "joinForm";
         /*
         * 1. 회원가입 페이지에서 데이터 전달 받음
@@ -62,8 +83,9 @@ public class UserController {
         * */
     }
 
-    @GetMapping("/user/join")
+    @GetMapping("/join")
     public @ResponseBody String join(){
+
         return "join";
         /*
         * 1. joinForm()를 통하여 User객체로 된 데이터를 전달 받음
@@ -72,6 +94,7 @@ public class UserController {
         * */
     }
 
+    @Secured("ROLE_USER")
     @GetMapping("/user/createPromiseForm")
     public @ResponseBody String createPromiseForm(){
         return "createPromise";
@@ -81,6 +104,7 @@ public class UserController {
         * */
     }
 
+    @Secured("ROLE_USER")
     @GetMapping("/user/createPromise")
     public @ResponseBody String createPromise(){
         return "createPromise";
@@ -91,6 +115,7 @@ public class UserController {
         * */
     }
 
+    @Secured("ROLE_USER")
     @GetMapping("/user/createGroupForm")
     public @ResponseBody String createGroupForm(){
         return "createGroupForm";
@@ -100,6 +125,7 @@ public class UserController {
         * */
     }
 
+    @Secured("ROLE_USER")
     @GetMapping("/user/createGroup")
     public @ResponseBody String createGroup(){
         return "createGroup";

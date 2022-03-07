@@ -18,6 +18,8 @@ public class User {
     private String name;
     private String phone;
     private String email;
+//   DB에 컬럼이 추가 되어야 한다
+    private String role;
 
     /*
     * idx = PK로 유저구분
@@ -26,5 +28,7 @@ public class User {
     * name = User의 이름
     * phone = User의 핸드폰 번호
     * email = User의 email
+    * roel = 유저의 사용 권한 (회원가입 시 자동으로 생성이 됨)
+    *       이것을 통하여 유저의
     * */
 }
