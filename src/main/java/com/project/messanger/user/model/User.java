@@ -12,17 +12,15 @@ import lombok.ToString;
 @NoArgsConstructor
 public class User {
 
-    private int idx;
+    private int userId;
     private String id;
     private String pwd;
     private String name;
     private String phone;
     private String email;
-//   DB에 컬럼이 추가 되어야 한다
     private String role;
-
     /*
-    * idx = PK로 유저구분
+    * user_id = PK로 유저구분
     * id = User의 id
     * pwd = User의 password
     * name = User의 이름

@@ -14,8 +14,7 @@ public class Promise {
 
     private int pro_idx;
     private int uidx;
-
-    // private int gidx;
+     private int gidx;
     /*
     * pro_idx = PK로 약속 구분
     * udix = User의 idx, 이를 통하여 하나의 약속에 어떤 유저들이 있는지 조회가 가능!

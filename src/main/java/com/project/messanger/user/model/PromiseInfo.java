@@ -5,13 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.sql.Date;
+
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Group {
-    private int groupId;
-    private String groupName;
-    private String groupInfo;
-    private int userId;
+public class PromiseInfo {
+    private int promise_id;
+    private String promise_name;
+    private  String promise_info;
+    private Date promise_date;
+    private String location;
 }

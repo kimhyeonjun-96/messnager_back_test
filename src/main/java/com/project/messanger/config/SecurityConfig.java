@@ -2,6 +2,7 @@ package com.project.messanger.config;
 
 
 import com.project.messanger.config.filter.MyFilter;
+import com.project.messanger.config.jwt.AuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -22,16 +23,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.addFilterBefore(new MyFilter(), SecurityContextPersistenceFilter.class);
+//        http.addFilterBefore(new MyFilter(), SecurityContextPersistenceFilter.class);
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .addFilter(corsFilter)
                 .formLogin().disable()
                 .httpBasic().disable()
+                .addFilter(new AuthenticationFilter(authenticationManager()))
                 .authorizeRequests()
-                .antMatchers("/**")
-                .access("hasRole('ROLE_USER')")
-                .anyRequest().permitAll();
+//                .antMatchers("/messanger/v1/user/**")
+//                .access("hasRole('ROLE_USER')")
+                .anyRequest()
+                .permitAll();
     }
 }

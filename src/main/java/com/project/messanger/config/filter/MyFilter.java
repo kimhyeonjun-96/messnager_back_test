@@ -26,14 +26,15 @@ public class MyFilter implements Filter {
             System.out.println("headerAuth >>> " + headerAuth);
             System.out.println("필터");
 
-            if(headerAuth.equals("test")){
+            if(headerAuth.equals("messnager")){
                 filterChain.doFilter(servletRequest, servletResponse);
             }else {
                 PrintWriter outPrintWriter = res.getWriter();
-                outPrintWriter.println("인증안됨");
+                outPrintWriter.println("no access!!");
             }
         }else{
             System.out.println("GET 요청 됨");
+            filterChain.doFilter(servletRequest, servletResponse);
         }
     }
 }
